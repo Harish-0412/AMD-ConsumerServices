@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === 'production' ? '/AMD-ConsumerServices/travel-assistant/' : '/',
+  base: mode === 'production' ? '/AMD-ConsumerServices/app/' : '/',
   server: {
     host: "::",
     port: 8080,
