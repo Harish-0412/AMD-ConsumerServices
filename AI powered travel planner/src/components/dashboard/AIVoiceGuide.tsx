@@ -134,7 +134,8 @@ const SmartVoiceGuide = () => {
 
         try {
             const backendUrl = import.meta.env.VITE_BACKEND_URL || "http://127.0.0.1:8000";
-            const response = await fetch(`${backendUrl}/api/voice-query`, {
+            const cleanUrl = backendUrl.replace(/\/$/, '');
+            const response = await fetch(`${cleanUrl}/api/voice-query`, {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
